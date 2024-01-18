@@ -304,8 +304,6 @@ void print_matches(FILE * output, char * format)
 }
 
 
-
-
 /* Returns the current date stamp */
 char *datestamp(void)
 {
