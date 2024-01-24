@@ -12,9 +12,6 @@
 #include "cyclonedx.h"
 #include "spdx.h"
 
-
-
-
 /* Add comments */
 component_item component_list[CRC_LIST_LEN];
 
