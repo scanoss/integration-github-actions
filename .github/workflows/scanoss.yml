@@ -1,4 +1,4 @@
-name: SCANOSS
+name: Test Action
 
 on:
   pull_request:
@@ -12,8 +12,8 @@ permissions:
   checks: write
 
 jobs:
-  scan:
-    name: SCANOSS Scan Job
+  test-action:
+    name: GitHub Actions Test
     runs-on: ubuntu-latest
 
     steps:
@@ -21,15 +21,16 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Scan with SCANOSS
-        id: scanoss-scan-action
-        uses: scanoss/actions-scan@main
+      - name: Test Local Action
+        id: test-action
+        uses: ./
         with:
-           # sbom-ignore: 'scanoss-ignore.json'
-           github-token: ${{ secrets.GITHUB_TOKEN }}
+           dependencies.enabled: false
+           policies: copyleft
+
 
       - name: Print stdout scan command
-        run: echo "${{ steps.scanoss-scan-action.outputs.stdout-scan-command }}"
+        run: echo "${{ steps.test-action.outputs.stdout-scan-command }}"
 
       - name: Print Results
-        run: cat "${{ steps.scanoss-scan-action.outputs.result-filepath }}"
+        run: cat "${{ steps.test-action.outputs.result-filepath }}"
