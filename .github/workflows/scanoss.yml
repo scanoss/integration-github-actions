@@ -22,12 +22,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Test Local Action
-        id: test-action
-        uses: ./
+        id: scanoss-scan-action
+        uses: scanoss/actions-scan@main
         with:
            dependencies.enabled: false
            policies: copyleft
-
 
       - name: Print stdout scan command
         run: echo "${{ steps.test-action.outputs.stdout-scan-command }}"
