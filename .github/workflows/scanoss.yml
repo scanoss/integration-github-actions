@@ -1,4 +1,4 @@
-name: Test Action
+name: SCANOSS
 
 on:
   pull_request:
@@ -12,8 +12,8 @@ permissions:
   checks: write
 
 jobs:
-  test-action:
-    name: GitHub Actions Test
+  scan:
+    name: SCANOSS Scan Job
     runs-on: ubuntu-latest
 
     steps:
@@ -21,7 +21,7 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Test Local Action
+      - name: Scan with SCANOSS
         id: scanoss-scan-action
         uses: scanoss/actions-scan@main
         with:
@@ -29,7 +29,7 @@ jobs:
            policies: copyleft
 
       - name: Print stdout scan command
-        run: echo "${{ steps.test-action.outputs.stdout-scan-command }}"
+        run: echo "${{ steps.scanoss-scan-action.outputs.stdout-scan-command }}"
 
       - name: Print Results
-        run: cat "${{ steps.test-action.outputs.result-filepath }}"
+        run: cat "${{ steps.scanoss-scan-action.outputs.result-filepath }}"
