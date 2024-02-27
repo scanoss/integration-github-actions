@@ -1,12 +1,12 @@
-name: Example Copyleft License Compliance Check
+name: Example Undeclared Component Compliance Check
 
 on:
   pull_request:
     branches:
-      - 'policy/copyleft/**'
+      - 'policy/undeclared/**'
   push:
     branches:
-      - 'policy/copyleft/**'
+      - 'policy/undeclared/**'
 
 permissions:
   contents: read
@@ -27,8 +27,8 @@ jobs:
         id: scan
         uses: scanoss/actions-scan@main
         with:
-          policies: copyleft
-          dependencies.enabled: true
+          policies: undeclared
+          dependencies.enabled: false
 
       - name: Print stdout scan command
         run: echo "${{ steps.scan.outputs.stdout-scan-command }}"

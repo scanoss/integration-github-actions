@@ -13,8 +13,8 @@ SCANOSS offers two predefined policies for scanning licenses: `copyleft` and `un
 
 This repository is organized into different branches to illustrate various use cases:
 
-- `policy/copyleft/no-copyleft`: Contains an example where no copyleft licenses are found.
-- `policy/copyleft/with-copyleft`: Contains an example where copyleft licenses are detected.
+- [`policy/copyleft/no-copyleft`](https://github.com/scanoss/integration-test/tree/policy/copyleft/no-copyleft): Contains an example where no copyleft licenses are found.
+- [`policy/copyleft/with-copyleft`](https://github.com/scanoss/integration-test/tree/policy/copyleft/with-copyleft): Contains an example where copyleft licenses are detected.
 - `policy/undeclared/no-undeclared-components`: Contains an example without undeclared components.
 - `policy/undeclared/with-undeclared-components`: Contains an example with undeclared components.
 
@@ -22,8 +22,8 @@ This repository is organized into different branches to illustrate various use c
 ## Examples in Action
 To illustrate how these policies work in real scenarios, we suggest reviewing the Pull Requests in this repository. We will keep PRs open for each use case:
 
-- PR for no-copyleft
-- PR for with-copyleft
+- [PR for no-copyleft](https://github.com/scanoss/integration-test/pull/10)
+- [PR for with-copyleft](https://github.com/scanoss/integration-test/pull/9)
 - PR for no-undeclared-components
 - PR for with-undeclared-components
 
