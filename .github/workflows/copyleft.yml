@@ -1,0 +1,35 @@
+name: Example Copyleft License Compliance Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'policy/copyleft/with-copyleft'
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  scanoss-analysis:
+    name: SCANOSS Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        id: checkout
+        uses: actions/checkout@v4
+
+      - name: Run SCANOSS analysis
+        id: scan
+        uses: scanoss/actions-scan@main
+        with:
+          policies: copyleft
+          dependencies.enabled: true
+
+      - name: Print stdout scan command
+        run: echo "${{ steps.scan.outputs.stdout-scan-command }}"
+
+      - name: Print Results
+        run: cat "${{ steps.scan.outputs.result-filepath }}"
