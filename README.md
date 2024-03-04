@@ -6,12 +6,12 @@ This repository serves as an example to demonstrate how to use the [SCANOSS GitH
 
 The repository is structured into two branches to showcase different scenarios:
 
-- [`main`](https://github.com/scanoss/integration-test/tree/main): Demonstrates a scenario where the codebase comply with the policies:
+- [`main`](https://github.com/scanoss/integration-github-actions/tree/main): Demonstrates a scenario where the codebase comply with the policies:
     - No copyleft licenses are found within the codebase.
     - All components are correctly declared in the [`sbom.json`](sbom.json) file. 
 
 
-- [`policy/violations`](https://github.com/scanoss/integration-test/tree/policy/violations): Illustrates the case where the codebase does not comply with the policies. You can find the failing PR [here](https://github.com/scanoss/integration-test/pull/15).
+- [`policy/violations`](https://github.com/scanoss/integration-github-actions/tree/policy/violations): Illustrates the case where the codebase does not comply with the policies. You can find the failing PR [here](https://github.com/scanoss/integration-github-actions/pull/15).
     - Introduction of copyleft licenses.
     - Usage of components that are not declared in the `sbom.json`. 
   
