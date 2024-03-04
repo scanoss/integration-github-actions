@@ -11,7 +11,7 @@ The repository is structured into two branches to showcase different scenarios:
     - All components are correctly declared in the [`sbom.json`](sbom.json) file. 
 
 
-- [`policy/violations`](https://github.com/scanoss/integration-github-actions/tree/policy/violations): Illustrates the case where the codebase does not comply with the policies. You can find the failing PR [here](https://github.com/scanoss/integration-github-actions/pull/15).
+- [`policy/violations`](https://github.com/scanoss/integration-github-actions/tree/policy/violations): Illustrates the case where the codebase does not comply with the policies. You can find the failing PR [here](https://github.com/scanoss/integration-github-actions/pull/14).
     - Introduction of copyleft licenses.
     - Usage of components that are not declared in the `sbom.json`. 
   
