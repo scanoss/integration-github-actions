@@ -1,6 +1,6 @@
-# SCANOSS GitHub Action Usage Example
+# SCANOSS Code Scan Action Usage Example
 
-This repository serves as an example to demonstrate how to use the [SCANOSS GitHub Action](https://github.com/scanoss/actions-scan/) for license management in your projects. SCANOSS provides two predefined policies for scanning: `copyleft` and `undeclared`.
+This repository serves as an example to demonstrate how to use the [SCANOSS Code Scan Action](https://github.com/scanoss/code-scan-action) for license management in your projects. SCANOSS provides two predefined policies for scanning: `copyleft` and `undeclared`.
 
 ## Overview
 
@@ -26,7 +26,7 @@ The repository is structured into two branches to showcase different scenarios:
 To use the SCANOSS GitHub Action in your project, you can add a workflow file under `.github/workflows` with the following basic setup:
 
 ```yaml
-name: Example SCANOSS Action
+name: Example SCANOSS Code Scan Workflow
 
 on:
   pull_request:
@@ -42,18 +42,17 @@ permissions:
   checks: write
 
 jobs:
-  scanoss-analysis:
-    name: SCANOSS Analysis
+  scanoss-code-scan:
+    name: SCANOSS Code Scan
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        id: checkout
         uses: actions/checkout@v4
 
-      - name: Run SCANOSS analysis
-        id: scan
-        uses: scanoss/actions-scan@main
+      - name: Run SCANOSS Code Scan
+        id: scanoss-code-scan-step
+        uses: scanoss/code-scan-action@main
         with:
           policies: copyleft, undeclared
 ```

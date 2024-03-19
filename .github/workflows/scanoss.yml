@@ -1,4 +1,4 @@
-name: Example SCANOSS Action
+name: Example SCANOSS Code Scan Workflow
 
 on:
   pull_request:
@@ -14,17 +14,17 @@ permissions:
   checks: write
 
 jobs:
-  scanoss-analysis:
-    name: SCANOSS Analysis
+  scanoss-code-scan:
+    name: SCANOSS Code Scan
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        id: checkout
         uses: actions/checkout@v4
 
-      - name: Run SCANOSS analysis
-        id: scan
-        uses: scanoss/actions-scan@main
+      - name: Run SCANOSS Code Scan
+        id: scanoss-code-scan-step
+        uses: scanoss/code-scan-action@main
         with:
           policies: copyleft, undeclared
+
