@@ -53,7 +53,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@main
+        uses: scanoss/actions-scan@v0
         with:
           policies: copyleft, undeclared
 ```
