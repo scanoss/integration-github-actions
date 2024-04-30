@@ -25,6 +25,6 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v0
+        uses: scanoss/actions-scan@SP-619
         with:
           policies: copyleft, undeclared
