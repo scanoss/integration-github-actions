@@ -1,7 +1,37 @@
 {
-  "components": [
-    {
-      "purl": "pkg:github/scanoss/scanoss.js"
-    }
-  ]
+    "spdxVersion": "SPDX-2.2",
+    "dataLicense": "CC0-1.0",
+    "SPDXID": "SPDXRef-d7eb17ea58f1fa6df75235c7301d5f1dce967b1b107b7417269586f7342c4d02",
+    "name": "SBOM",
+    "documentNamespace": "https://spdx.org/spdxdocs/firetools-d7eb17ea58f1fa6df75235c7301d5f1dce967b1b107b7417269586f7342c4d02",
+    "creationInfo": {
+        "creators": [
+            "Tool: SCANOSS SBOM Workbench",
+            "Person: TUDAI"
+        ],
+        "created": "2024-04-30T15:17:56.945Z"
+    },
+    "packages": [
+        {
+            "name": "scanoss",
+            "SPDXID": "SPDXRef-f70512bb655ed191e06bff9a3b898fb9",
+            "versionInfo": "0.2.20",
+            "downloadLocation": "https://www.npmjs.com/package/scanoss",
+            "filesAnalyzed": false,
+            "homepage": "https://www.npmjs.com/package/scanoss",
+            "licenseDeclared": "MIT",
+            "licenseConcluded": "MIT",
+            "copyrightText": "NOASSERTION",
+            "externalRefs": [
+                {
+                    "referenceCategory": "PACKAGE_MANAGER",
+                    "referenceLocator": "pkg:npm/scanoss",
+                    "referenceType": "purl"
+                }
+            ]
+        }
+    ],
+    "documentDescribes": [
+        "SPDXRef-f70512bb655ed191e06bff9a3b898fb9"
+    ]
 }
