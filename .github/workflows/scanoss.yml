@@ -28,4 +28,4 @@ jobs:
         uses: scanoss/actions-scan@v0
         with:
           policies: copyleft, undeclared
-          dependencies.enable: true
+          dependencies.enabled: true
