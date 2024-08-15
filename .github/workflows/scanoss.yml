@@ -25,7 +25,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v0.1.4
+        uses: scanoss/actions-scan@feat/SP-1345-Publish-policy-check-md-files-to-artifacts
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
