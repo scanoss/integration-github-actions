@@ -25,7 +25,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v0
+        uses: scanoss/actions-scan@bug/SP-1340-Content-exceeded-in-policy-check
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
