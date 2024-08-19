@@ -25,7 +25,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@feat/SP-1349-Add-policy-check-artifact-link
+        uses: scanoss/actions-scan@feat/SP-1344-get-OSADL
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
