@@ -25,7 +25,9 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@feat/SP-1344-get-OSADL
+        uses: scanoss/actions-scan@feat/SP-1343-Make-copyleft-license-configurable
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
+          licenses.copyleft.include: MIT
+          licenses.copyleft.exclude: GPL-3.0-only, LGPL-2.1-only
