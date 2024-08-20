@@ -30,3 +30,4 @@ jobs:
           policies: copyleft, undeclared
           dependencies.enabled: true
           licenses.copyleft.include: Python-2.0
+          licenses.copyleft.explicit: GPL-3.0-only
