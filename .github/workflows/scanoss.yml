@@ -25,7 +25,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@feat/SP-1343-Make-copyleft-license-configurable
+        uses: scanoss/actions-scan@v0.2.0
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
