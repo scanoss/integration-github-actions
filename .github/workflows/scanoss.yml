@@ -31,4 +31,5 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          runtimeContainer: ghcr.io/scanoss/scanoss-py:v1.14.0
+          licenses.copyleft.include: MIT
+          dependencies.scope.include: devDependencies
