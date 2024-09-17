@@ -31,5 +31,4 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          licenses.copyleft.include: MIT
           dependencies.scope.include: devDependencies
