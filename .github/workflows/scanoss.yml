@@ -31,4 +31,4 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          dependencies.scope.include: devDependencies
+          runtimeContainer: ghcr.io/scanoss/scanoss-py:v1.14.0
