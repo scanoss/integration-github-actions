@@ -31,3 +31,4 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
+          dependencies.scope.include: devDependencies
