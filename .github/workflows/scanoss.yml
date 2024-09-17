@@ -31,5 +31,5 @@ jobs:
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
-          licenses.copyleft.exclude: LGPL-2.1-only
+          licenses.copyleft.exclude: LGPL-2.1-only, GPL-2.0-only
           dependencies.scope: prod
