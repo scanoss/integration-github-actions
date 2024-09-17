@@ -27,8 +27,9 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v0.2.1
+        uses: scanoss/actions-scan@feat/SP-1497-Add-dependency-scope-filtering
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
           licenses.copyleft.exclude: LGPL-2.1-only,GPL-3.0-only
+          dependendencies.scope: prod
