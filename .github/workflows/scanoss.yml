@@ -27,7 +27,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v0
+        uses: scanoss/actions-scan@bug/groh/bug-on-api-key
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
