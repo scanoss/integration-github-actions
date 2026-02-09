@@ -1,0 +1,7 @@
+{
+  "settings": {
+      "file_snippet": {
+            "min_snippet_hits": 30
+     }
+  }
+}
