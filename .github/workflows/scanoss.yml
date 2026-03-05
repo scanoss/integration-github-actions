@@ -27,7 +27,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v1
+        uses: scanoss/actions-scan@fix/SP-4123-corrupted-artifact-files
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
