@@ -33,6 +33,6 @@ jobs:
           dependencies.enabled: true
           licenses.copyleft.include: MIT
           dependencies.scope.include: devDependencies
-          api.url: "https://api.scanoss.com/scan/direct"
+          api.url: "https://api.scanoss.com/scan/dire"
           api.key: ${{ secrets.SCANOSS_API_KEY }}
           policies.halt_on_failure: true
