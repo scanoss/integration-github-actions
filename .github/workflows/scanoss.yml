@@ -27,7 +27,7 @@ jobs:
 
       - name: Run SCANOSS analysis
         id: scan
-        uses: scanoss/actions-scan@v1
+        uses: scanoss/actions-scan@fix/SP-4207-cancel-pending-policy-checks-on-workflow-failure 
         with:
           policies: copyleft, undeclared
           dependencies.enabled: true
@@ -35,3 +35,4 @@ jobs:
           dependencies.scope.include: devDependencies
           api.url: "https://api.scanoss.com/scan/direct"
           api.key: ${{ secrets.SCANOSS_API_KEY }}
+          policies.halt_on_failure: true
